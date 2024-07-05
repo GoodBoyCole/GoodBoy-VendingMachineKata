@@ -20,4 +20,17 @@ void presentBalance(const long balance, char *price) {
     strcat(price, dollars);
     strcat(price, ".");
     sprintf(cents, "%02ld", balance % 100);
-    strcat(price, cents)
+    strcat(price, cents);
+}
+
+void insert_coin(struct vending_machine* machine, int coin) {
+    machine->coin_count += 1;
+    machine->coins[0] = coin;
+
+    machine->balance += coin;
+
+    char price[DISPLAY_LENGTH];
+    presentBalance(machine->balance, price);
+    strncpy(machine->display, price, sizeof(machine->display) - 1);
+}
+
