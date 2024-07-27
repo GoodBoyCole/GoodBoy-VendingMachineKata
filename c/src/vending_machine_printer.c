@@ -20,3 +20,19 @@ print_line(char *buffer, const char *key, const char *value) {
     char whitespace[whitespace_length];
     for (int i = 0; i < whitespace_length -1; ++i) {
         whitespace[i] = ' ';
+    }
+    whitespace[whitespace_length-1] = '\0';
+
+    sprintf(buffer, "%s%s%s\n", key, whitespace, value );
+}
+
+void
+print_coins(char* buffer, const int* coins, int coins_length) {
+    // 4 chars for each coin plus zero termination
+    int max_array_size = (coins_length)*4 + 1;
+    char current_coin[5];
+    char array_contents[max_array_size];
+    for (int i = 0; i < coins_length; ++i) {
+        snprintf(current_coin, 5, "%2d, ", coins[i]);
+        if (i == 0) {
+            strncpy(array_c
