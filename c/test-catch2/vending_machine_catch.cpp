@@ -23,3 +23,7 @@ TEST_CASE ("VendingMachine") {
         CHECK(5 == machine->balance);
         CHECK(1 == machine->coin_count);
         CHECK(5 == machine->coins[0]);
+    }
+}
+
+
