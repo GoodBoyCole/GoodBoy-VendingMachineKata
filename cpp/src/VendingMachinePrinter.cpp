@@ -18,4 +18,18 @@ VendingMachinePrinter::~VendingMachinePrinter() {
     machine = nullptr;
 }
 
-// convenience function to lay out a key va
+// convenience function to lay out a key value pair at either end of a line like this:
+//
+// foo                       bar
+//
+std::string VendingMachinePrinter::formatLine(const std::string& key, const std::string& value) const {
+    auto whitespaceSize = columns - key.size() - value.size();
+    std::string whitespace = std::string(whitespaceSize, ' ');
+    std::stringstream stream;
+    stream << key << whitespace << value << '\n';
+    return stream.str();
+}
+
+// convenience function to print a vector of integers in a readable way
+// {5, 10}
+std::str
