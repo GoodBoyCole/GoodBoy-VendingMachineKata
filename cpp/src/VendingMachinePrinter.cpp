@@ -32,4 +32,14 @@ std::string VendingMachinePrinter::formatLine(const std::string& key, const std:
 
 // convenience function to print a vector of integers in a readable way
 // {5, 10}
-std::str
+std::string VendingMachinePrinter::printVector(const std::vector<int>* items) const {
+    std::stringstream stream;
+    stream << "{";
+    std::string separator;
+    for (auto const& value : *items) {
+        stream << separator << value;
+        separator = ", ";
+    }
+    stream << "}";
+    return stream.str();
+}

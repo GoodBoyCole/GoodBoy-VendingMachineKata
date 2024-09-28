@@ -1,0 +1,9 @@
+#ifndef VENDINGMACHINEAPPROVALKATA_VENDINGMACHINEPRINTER_H
+#define VENDINGMACHINEAPPROVALKATA_VENDINGMACHINEPRINTER_H
+
+
+#include "VendingMachine.h"
+
+class VendingMachinePrinter {
+public:
+    explicit
