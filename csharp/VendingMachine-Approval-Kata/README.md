@@ -11,4 +11,4 @@ This is starting code for doing approval testing for the [Vending Machine Kata](
    * Be sure to update your printer so it shows the contents of the returns tray.
 4. Implement the "select product" feature.
    * If you look at VendingMachine_v4 there is a working implementation for this feature.
-   * Be sure to update y
+   * Be sure to update your printer to show the selected product
