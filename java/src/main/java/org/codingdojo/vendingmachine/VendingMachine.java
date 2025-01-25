@@ -50,4 +50,11 @@ public class VendingMachine {
         return balance;
     }
 
-    publ
+    public Integer[] coins() {
+        return coins.toArray(new Integer[0]);
+    }
+
+    public String display() {
+        return display;
+    }
+}
