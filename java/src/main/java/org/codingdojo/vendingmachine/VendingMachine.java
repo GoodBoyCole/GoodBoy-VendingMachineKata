@@ -26,4 +26,28 @@ public class VendingMachine {
         displayBalance();
     }
 
-    private void displayBalance()
+    private void displayBalance() {
+        if(this.balance != 0){
+            this.display = String.valueOf(this.balance);
+        }
+        else{
+            this.display = "INSERT COIN";
+        }
+    }
+
+    public void insertCoin(Integer coin){
+        if(Arrays.asList(acceptedCoins).contains(coin)){
+            this.coins.add(coin);
+            this.balance += coin;
+            this.displayBalance();
+        }
+        else{
+            this.returns.add(coin);
+        }
+    }
+
+    public Integer balance() {
+        return balance;
+    }
+
+    publ
