@@ -19,4 +19,10 @@ class VendingMachinePrinter:
         Foo                                       Bar
 
         """
-        va
+        value_as_str = f"{value}"
+        whitespace_size = self.columns - len(name) - len(value_as_str)
+        whitespace = ""
+        for i in range(whitespace_size):
+            whitespace += " "
+        line = f"{name}{whitespace}{value_as_str}\n"
+        return line
