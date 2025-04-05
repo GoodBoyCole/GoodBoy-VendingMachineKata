@@ -1,0 +1,1 @@
+# Vending Machine Approval Kata\n\nThis project contains starting code for practicing Approval testing techniques with the [Vending Machine Kata](https://sammancoaching.org/kata_descriptions/vending_machine.html).\n\n## Objectives\n\n1. The initial code includes a functional test

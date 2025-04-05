@@ -10,4 +10,10 @@ class VendingMachine:
         if self.balance:
             self.display = f"{self.balance}"
         else:
-       
+            self.display = "INSERT COIN"
+
+    def insert_coin(self, value):
+        self.coins.append(value)
+        self.balance += value
+        self._display_balance()
+
